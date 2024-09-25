@@ -3,6 +3,12 @@
     "com.sonosthesia.audio": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.audio",
     "com.sonosthesia.pack": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.pack",
     "com.sonosthesia.packaudio": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.packaudio",
+    "com.sonosthesia.signal": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.signal",
+    "com.sonosthesia.utils": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.utils",
+    "com.sonosthesia.processing": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.processing",
+    "com.sonosthesia.flow": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.flow",
+    "com.sonosthesia.mapping": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.mapping",
+    "com.sonosthesia.target": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.target",
     "com.unity.collab-proxy": "2.5.1",
     "com.unity.feature.development": "1.0.1",
     "com.unity.textmeshpro": "3.0.6",
@@ -39,12 +45,7 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",
-    "com.sonosthesia.signal": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.signal",
-    "com.sonosthesia.utils": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.utils",
-    "com.sonosthesia.processing": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.processing",
-    "com.sonosthesia.flow": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.flow",
-    "com.sonosthesia.mapping": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.mapping"
+    "com.unity.modules.xr": "1.0.0"
   },
   "scopedRegistries": [
     {

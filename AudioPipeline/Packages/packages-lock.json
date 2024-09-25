@@ -93,6 +93,16 @@
         "com.sonosthesia.processing": "1.9.0"
       }
     },
+    "com.sonosthesia.target": {
+      "version": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.target",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.neuecc.unirx": "7.1.0",
+        "com.sonosthesia.utils": "1.9.0",
+        "com.sonosthesia.signal": "1.9.0"
+      }
+    },
     "com.sonosthesia.utils": {
       "version": "file:../../../sonosthesia-unity-packages/packages/com.sonosthesia.utils",
       "depth": 0,
