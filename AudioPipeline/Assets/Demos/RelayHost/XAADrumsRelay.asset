@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee614563b2be4d0483f19a8bab92a6ef, type: 3}
-  m_Name: XAARelay
+  m_Name: XAADrumsRelay
   m_EditorClassIdentifier: 
   _continuous: {fileID: 0}
   _peak: {fileID: 0}

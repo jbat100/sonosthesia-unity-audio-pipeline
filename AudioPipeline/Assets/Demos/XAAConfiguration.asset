@@ -19,7 +19,7 @@ MonoBehaviour:
     _magnitudeThreshold: -30
     _strengthThreshold: 0
   _midPeakFilter:
-    _magnitudeThreshold: -30
+    _magnitudeThreshold: -25
     _strengthThreshold: 0
   _highPeakFilter:
     _magnitudeThreshold: -30
