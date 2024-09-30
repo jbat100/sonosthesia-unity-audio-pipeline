@@ -25,7 +25,13 @@ Analysis `.xaa` files contain both continuous data computed on every audio frame
 
 - Add one of the concrete `XAAHost` subclasses as component to a game object and bind it to the XAATrack. This is component to which the XAATrack sends analysis data to.
 
-You can drag the `.xaa` file and the XAATrack, aligned with the associated audio file on an audio track. Note you can have multiple `.xaa` files for one audio track in the case where you ran the analysis on separated sources. Based on the host subclass you use:
+You can drag the `.xaa` file and the XAATrack, aligned with the associated audio file on an audio track. Note you can have multiple `.xaa` files for one audio track in the case where you ran the analysis on separated sources. The imported asset inpector gives information on the analysis track such as RMS magnitude ranges and number of extracted peaks.
+
+<p align="center">
+  <img alt="XAATrack" src="https://github.com/user-attachments/assets/9965bba9-6f3d-4e7b-8846-bf56e2aec7e2">
+</p>  
+
+Based on the host subclass you use:
 
 ### XAASignalHost
 
@@ -41,8 +47,29 @@ You can drag the `.xaa` file and the XAATrack, aligned with the associated audio
 
 - Target the outputs of the XAARelayReceiver to signals as described for XAASignalHost
 
-<img width="992" alt="XAATrack" src="https://github.com/user-attachments/assets/9965bba9-6f3d-4e7b-8846-bf56e2aec7e2">
 
+## Configuration
+
+The raw analysis data isn't great for driving visuals out of the box, a number of tools are available to address this. `XAAHost` subclasses point to a `XAAConfiguration` scriptable object which:
+
+- remaps a given magnitude range (in dBs) to a normalized range (0, 1). Typically the dB range of interest is around (-35 to -5).   
+- filters peaks under given magnitude (peak dB) and strength (normalized onset envelope peak), as the raw peak extraction can be overly sensitive.
+
+For each of the different analysis frequency bands available (main, lows, mids, highs).
+
+<p align="center">
+  <img width="380" alt="XAAConfiguration" src="https://github.com/user-attachments/assets/6bf93f7e-6afd-40cd-9cd3-08baa60d11b9">
+</p>  
+
+## Processing and Filtering
+
+The raw analysis signals can feel somewhat jerky and jittery. Using the signal [processing](https://github.com/jbat100/sonosthesia-unity-packages/tree/main/packages/com.sonosthesia.processing) facilities offered by sonosthesia, they can be smoothed in order to make them more suited to drive visuals. A specific filter factory is provided which chains a one euro filter, a soft landing filter (which prevents the signal droping above a given rate) and a range remaper. 
+
+<p align="center">
+  <img width="564" alt="SignalProcessing" src="https://github.com/user-attachments/assets/1e459cd1-18cc-4bcd-a8b3-6b55eeb08c6a">
+</p>  
+
+The `SignalHost` demo scenes shows a comparison of filtered vs unfiltered signals to illustrate the various algorithms.
 
 ## Demo scenes
 
