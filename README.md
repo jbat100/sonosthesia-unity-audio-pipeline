@@ -53,6 +53,13 @@ The raw analysis data isn't great for driving visuals out of the box, a number o
 - remaps a given magnitude range (in dBs) to a normalized range (0, 1). Typically the dB range of interest is around (-35 to -5).   
 - filters peaks under given magnitude (peak dB) and strength (normalized onset envelope peak), as the raw peak extraction can be overly sensitive.
 
+<img width="380" alt="XAAConfiguration" src="https://github.com/user-attachments/assets/6bf93f7e-6afd-40cd-9cd3-08baa60d11b9">
+
+## Processing and Filtering
+
+<img width="564" alt="SignalProcessing" src="https://github.com/user-attachments/assets/1e459cd1-18cc-4bcd-a8b3-6b55eeb08c6a">
+
+
 ## Demo scenes
 
 A number of demo scenes are provided showing various ways of routing analysis signals. You can alter the timeline to use any audio file and associated `.xaa` files.
