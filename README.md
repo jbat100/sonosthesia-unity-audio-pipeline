@@ -19,7 +19,6 @@ The following Unity packages are used
 
 First you need to generate analysis files using the [sonosthesia-audio-pipeline](https://github.com/jbat100/sonosthesia-audio-pipeline). Refer to the project README for installation and usage.
 
-
 Analysis `.xaa` files contain both continuous data computed on every audio frame with 512 sample hop size, and discreet data such as detected peaks. Future evolutions may contain additional data, such as bars, notes, mood, keys etc... An asset importer is provided along with custom timeline tracks which allow analysis data to be routed to signals.
 
 - Create Unity timeline tracks available under `Sonosthsia.Audio/XAATrack` in the unity timeline. You can then drag and drop any .xaa file on to the track.
@@ -41,6 +40,9 @@ You can drag the `.xaa` file and the XAATrack, aligned with the associated audio
 - In any Unity scene, create a `XAARelayReceiver` component and set its source as the XAARelay you created.
 
 - Target the outputs of the XAARelayReceiver to signals as described for XAASignalHost
+
+<img width="992" alt="XAATrack" src="https://github.com/user-attachments/assets/9965bba9-6f3d-4e7b-8846-bf56e2aec7e2">
+
 
 ## Demo scenes
 
