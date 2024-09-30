@@ -15,7 +15,7 @@
       "url": "https://package.openupm.com"
     },
     "com.sonosthesia.audio": {
-      "version": "1.10.0",
+      "version": "1.10.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -112,7 +112,7 @@
       "url": "https://registry.npmjs.com"
     },
     "com.sonosthesia.utils": {
-      "version": "1.10.0",
+      "version": "1.10.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
