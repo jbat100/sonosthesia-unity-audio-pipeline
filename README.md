@@ -25,7 +25,11 @@ Analysis `.xaa` files contain both continuous data computed on every audio frame
 
 - Add one of the concrete `XAAHost` subclasses as component to a game object and bind it to the XAATrack. This is component to which the XAATrack sends analysis data to.
 
-You can drag the `.xaa` file and the XAATrack, aligned with the associated audio file on an audio track. Note you can have multiple `.xaa` files for one audio track in the case where you ran the analysis on separated sources. Based on the host subclass you use:
+You can drag the `.xaa` file and the XAATrack, aligned with the associated audio file on an audio track. Note you can have multiple `.xaa` files for one audio track in the case where you ran the analysis on separated sources. The imported asset inpector gives information on the analysis track such as RMS magnitude ranges and number of extracted peaks.
+
+<img width="992" alt="XAATrack" src="https://github.com/user-attachments/assets/9965bba9-6f3d-4e7b-8846-bf56e2aec7e2">
+
+Based on the host subclass you use:
 
 ### XAASignalHost
 
@@ -41,8 +45,13 @@ You can drag the `.xaa` file and the XAATrack, aligned with the associated audio
 
 - Target the outputs of the XAARelayReceiver to signals as described for XAASignalHost
 
-<img width="992" alt="XAATrack" src="https://github.com/user-attachments/assets/9965bba9-6f3d-4e7b-8846-bf56e2aec7e2">
 
+## Configuration
+
+The raw analysis data isn't great for driving visuals out of the box, a number of tools are available to address this. `XAAHost` subclasses point to a `XAAConfiguration` scriptable object which:
+
+- remaps a given magnitude range (in dBs) to a normalized range (0, 1). Typically the dB range of interest is around (-35 to -5).   
+- filters peaks under given magnitude (peak dB) and strength (normalized onset envelope peak), as the raw peak extraction can be overly sensitive.
 
 ## Demo scenes
 
