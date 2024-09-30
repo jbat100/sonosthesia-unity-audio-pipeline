@@ -17,13 +17,16 @@ The following Unity packages are used
 
 ## Getting started
 
-Analysis `.xaa` files contain both continuous data computed on every audio frame with 512 sample hop size, and discreet data such as detected peaks. Future evolutions may contain additional data, such as bars, notes, mood, keys etc...
+First you need to generate analysis files using the [sonosthesia-audio-pipeline](https://github.com/jbat100/sonosthesia-audio-pipeline). Refer to the project README for installation and usage.
 
-- Create Unity timeline tracks available under `Sonosthsia.Audio/XAATrack` in the unity timeline.
 
-- Add one of the concrete `XAAHost` subclasses as component to a game object and bind it to the XAATrack.
+Analysis `.xaa` files contain both continuous data computed on every audio frame with 512 sample hop size, and discreet data such as detected peaks. Future evolutions may contain additional data, such as bars, notes, mood, keys etc... An asset importer is provided along with custom timeline tracks which allow analysis data to be routed to signals.
 
-Based on the subclass you use:
+- Create Unity timeline tracks available under `Sonosthsia.Audio/XAATrack` in the unity timeline. You can then drag and drop any .xaa file on to the track.
+
+- Add one of the concrete `XAAHost` subclasses as component to a game object and bind it to the XAATrack. This is component to which the XAATrack sends analysis data to.
+
+You can drag the `.xaa` file and the XAATrack, aligned with the associated audio file on an audio track. Note you can have multiple `.xaa` files for one audio track in the case where you ran the analysis on separated sources. Based on the host subclass you use:
 
 ### XAASignalHost
 
@@ -41,7 +44,7 @@ Based on the subclass you use:
 
 ## Demo scenes
 
-A number of demo scenes are provided showing various ways of routing analysis signals
+A number of demo scenes are provided showing various ways of routing analysis signals. You can alter the timeline to use any audio file and associated `.xaa` files.
 
 ### SignalHost
 
